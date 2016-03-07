@@ -20,7 +20,7 @@ Therefore, the goals of this project are:
 - To write an engine in C++ to support these games, with a base in the existing JavaScript implementation.
 - To integrate the engine with the existing ScummVM framework, so that it can support MacVenture games in the many platforms that ScummVM supports.
 
-Most of the MacVenture games were pioneers in their respective genres (1), so the ScummVM community would benefit greatly from having access to these games as classics of their genres.
+Most of the MacVenture games were pioneers in their respective genres (1), so the ScummVM community would benefit greatly from having access to these games as classics of their genres, for academic and nostalgic value.
 
 ## Implementation notes
 
@@ -28,7 +28,7 @@ The project will follow the structure of WebVenture to support both versions of 
 
 WebVenture implements abstractions for the main subsystems of the engine ([engine][2], [graphics][3], [controls][4], [sound][5], [text][6] etc. subsystems) and then specializations for each of the engines ([Mac][7], [AppleII][8]). This structure complies with the current structure of ScummVM engines, and therefore it can be directly adapted.
 
-The project will follow a test-driven development model in which tests are written first as a form of specification and code is written later. This model offers the advantages of fast iterability, support for heavy refactoring (to handle the abstractions, as described later in the planning section) and ensure a certain level of quality within the product. Thus, the aim is to have fast (weekly) development cycles.
+The project will follow a test-driven development model in which tests are written first as a form of specification and code is written later. This model offers the advantages of fast iterability, support for heavy refactoring (to handle the abstractions, as described later in the planning section) and ensure a certain level of quality within the product. Thus, the aim is to have fast (weekly or shorter) development cycles.
 
 ## Deliverables
 
@@ -70,30 +70,63 @@ The development will focus on Shadowgate support as a main goal, and then add su
 - **May 23rd - May 29th**: 
     - Implement main loop of the game, and successfully add a new engine project to ScummVM.
     - Define an internal representation for game objects and graphics.
-    - Implement game file data loading.
 
 - **May 30th - June 5th**:
+    - Implement game file data loading.
     - Implement windowing system.
-    - Implement menus and menu-based controls.
     
 - **June 6th - June 12th**:
+    - Implement menus and menu-based controls.
     - Implement dialogue system.
-    - Implement sound system.
-    - Reach Milestone 1.
 
 - **June 13th - June 19th**: 
-    - Implement savegame support.
-    - Add support and test the other MacVenture games.
-    - Milestone 2 reached.
+    - Implement sound system.  
+    - Achieve Milestone 1.
     
 - **June 20th - June 26th**:
-    - Mid-term evaluations.
+    - Mid-term evaluation.
+    - Add support and test the other MacVenture games.
+    
+- **June 27th - July 3rd**: 
+    - Implement savegame support.      
+    - Achieve Milestone 2.
+    
+- **July 4th - July 10th**:
     - Refactor the current code to abstract common components.
+ 
+- **July 11th - July 17th**: 
+    - Implement Apple II game data loading.
+    - Implement Apple II graphics system.
 
+- **July 18th - July 24th**:      
+    - Extend the interface to allow Apple II ports. 
+    - Extend dialogue system to allow Apple II games.
+
+- **July 25th - July 31st**: 
+    - Implement Apple II sound system.
+
+- **August 1st - August 7th**:  
+    - Implement Apple II savegame system. 
+    - Milestone 3 reached.
+
+- **August 8th - August 14th**: 
+    - Add support and test the other Apple II games.
+    
+- **August 15th - August 22nd**:
+    - Clean code to comply with ScummVM standards.
+    - Write Doxygen documentation.
+    - Achieve Milestone 5.
+
+- **August 23rd - August 29th**:
+    - Final evaluation.
+
+## Availability and constraints
+
+## Technical background
 
 ## References
 
-[1]: Shadowgate was the first "first person RPG".
+[1]: Shadowgate was the first "first person RPG", http://www.zojoi.com/shadowgate_macventure/ (description, second paragraph).
 [2]: https://github.com/blorente/webventure/blob/master/engine.js
 [3]: https://github.com/blorente/webventure/blob/master/graphics.js
 [4]: https://github.com/blorente/webventure/blob/master/controls.js

@@ -124,6 +124,8 @@ The development will focus on Shadowgate support as a main goal, and then add su
 
 ## Technical background
 
+## [Pull Request](https://github.com/scummvm/scummvm/pull/688)
+
 ## References
 
 [1]: Shadowgate was the first "first person RPG", http://www.zojoi.com/shadowgate_macventure/ (description, second paragraph).

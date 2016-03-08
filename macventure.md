@@ -105,10 +105,11 @@ The development will focus on Shadowgate support as a main goal, and then add su
 
 - **August 1st - August 7th**:  
     - Implement Apple II savegame system. 
-    - Milestone 3 reached.
+    - Achieve Milestone 3.
 
 - **August 8th - August 14th**: 
     - Add support and test the other Apple II games.
+    - Achieve Milestone 4.
     
 - **August 15th - August 22nd**:
     - Clean code to comply with ScummVM standards.
@@ -122,9 +123,26 @@ The development will focus on Shadowgate support as a main goal, and then add su
 
 Currently, and until May 30th, I'll be taking classes at university. During this period, the number of hours I will be able to dedicate to the project is about 30, weekly. 
 
+After that, and until June 30th, my exam period will take place. Despite the appearances, this is quite a relaxed period, since this semester most of the subjects are projects-based, and thus will be over before this date. I will be able to dedicate 40 weekly hours to the project.
+
+From June 30th until the end of the program, I don't have any other significative commitment, so I'll be able to dedicate most of my time to the project, about  70 weekly hours.
+
+I will spend my time in Spain, so my timezone will be GMT + 1.
+
 ## Technical background
 
-## [Pull Request](https://github.com/scummvm/scummvm/pull/688)
+I am currently in my third year of college, at Universidad Complutense de Madrid, in Spain. The main languages used there are Java and C, but I have also taken classes in ARM7 assembly, C++, JavaScript, among others. The highly theoretical approach my university takes ensures that the principles of good software design are prioritized over teaching particular languages. Therefore, I am able to pick up new languages really quickly.
+
+In addition to that, I have done several side-projects, which I believe fit exactly with the profile needed for this project. Among others, these are:
+
+- Aa [CHIP-8 emulator][9] in C++, which I made because I love working with old machines and languages.
+- Some [games and engines][10] in JavaScript, for one of my ongoing courses at university, so I can understand the WebVenture engine code.
+
+A more complete list of available projects can be found in [my portfolio][11]. 
+
+I don't have mastery over C++, but the side-projects I've done and the fluency on C and Java that I aquired at University allow me to understand most of the complicated concepts with ease.
+
+## [Pull Request (688)](https://github.com/scummvm/scummvm/pull/688)
 
 ## References
 
@@ -136,4 +154,7 @@ Currently, and until May 30th, I'll be taking classes at university. During this
 [6]: https://github.com/blorente/webventure/blob/master/text.js
 [7]: https://github.com/blorente/webventure/tree/master/mac
 [8]: https://github.com/blorente/webventure/tree/master/gs
+[9]: https://bitbucket.org/Kerith/chip-towers
+[10]: https://bitbucket.org/Kerith/dvi-labs
+[11]: http://blorente.github.io
 

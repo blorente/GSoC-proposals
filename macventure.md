@@ -1,5 +1,3 @@
-## Contact information
-
 - **Name:** Borja Lorente
 - **Email:** blorente@ucm.es
 - **Handle (IRC and wiki):** blorente
@@ -121,6 +119,8 @@ The development will focus on Shadowgate support as a main goal, and then add su
     - Final evaluation.
 
 ## Availability and constraints
+
+Currently, and until May 30th, I'll be taking classes at university. During this period, the number of hours I will be able to dedicate to the project is about 30, weekly. 
 
 ## Technical background
 

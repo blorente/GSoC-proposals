@@ -33,7 +33,7 @@ The project will follow a test-driven development model in which tests are writt
 - Core abstractions, for both versions (Macintosh 128k and Apple II):
     - Main loop of the game, representation of victory conditions.    
     - Internal representation of graphics (sprites) and game objects.
-    - Windowing system (Drag and drop, window resizing), based upon the current Tinsel implementation.
+    - Windowing system (Drag and drop, window resizing)
     - Menu-based point-and-click controls.
     - Text and dialogue system.
     - Sound system.

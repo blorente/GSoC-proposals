@@ -3,7 +3,7 @@
 - **Handle (IRC and wiki):** blorente
 - **Phone:** (+34) 722 747 898
 
-# Add support for MacVenture games via WebVenture engine
+# Add support for MacVenture games by reimplementing the WebVenture engine
 
 *by Borja Lorente (blorente), 2016*
 
@@ -11,7 +11,7 @@
 
 The ScummVM project currently does not support the original MacVenture games developed for the Macintosh 128k. However, there is already a modern implementation of these games that supports the original game files, the WebVenture engine. 
 
-Most of the reverse engineering work for the MacVenture games is [already done][2] in the WebVenture engine, but since it is written in JavaScript, a direct port is necessary for it's integration with ScummVM. In addition, the WebVenture engine already supports the Apple II versions of the games, making it possible for them to be added to the same engine in the respective ScummVM implementation.
+Most of the reverse engineering work for the games is [already done][2] in the WebVenture engine, but since it is written in JavaScript, a direct reimplementation is necessary for it's integration with ScummVM. In addition, the WebVenture engine already supports the Apple II versions of the games, making it possible for them to be added to the same engine in the respective ScummVM implementation.
 
 Therefore, the goals of this project are:
 
@@ -127,7 +127,7 @@ Currently, and until May 30th, I'll be taking classes at university. During this
 
 After that, and until June 30th, my exam period will take place. Despite the appearances, this is quite a relaxed period, since this semester most of the subjects are projects-based, and thus will be over before this date. I will be able to dedicate 40 weekly hours to the project.
 
-From June 30th until the end of the program, I don't have any other significative commitment, so I'll be able to dedicate most of my time to the project, about 70 weekly hours. This is notably more time than in the other periods, so this period will be also reserved as a contingency period, should any important roadblock arise during development.
+From June 30th until the end of the program, I don't have any other significative commitment, so I'll be able to dedicate most of my time to the project, about 60 weekly hours. This is notably more time than in the other periods, so this period will be also reserved as a contingency period, should any important roadblock arise during development.
 
 I will spend my time in Spain, so my timezone will be GMT + 1.
 

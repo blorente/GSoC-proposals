@@ -7,7 +7,7 @@
 
 _by Borja Lorente (blorente), 2016_
 
-## Goals
+## Problem Statement and Goals
 
 The ScummVM project currently does not support the original MacVenture games developed for the Macintosh 128k. However, there is already a modern implementation of these games that supports the original game files, the WebVenture engine. 
 
@@ -22,9 +22,9 @@ Most of the MacVenture games were pioneers in their respective genres (1), so th
 
 ## Implementation notes
 
-The project will follow the structure of WebVenture to support both versions of the games. 
+The project will follow the structure of WebVenture to support both versions of the games, and it will take example of the WAGE engine already implemented in ScummVM, since it bears many similarities (both were for GUI-based games in the Macintosh). As happens with WebVenture, the engine will be only compatible with the original Macintosh and Apple II disk images, and will require them to play the games.
 
-WebVenture implements abstractions for the main subsystems of the engine ([engine][3], [graphics][4], [controls][5], [sound][6], [text][7], etc.), and then specializations for each of the engines ([Macintosh][8], [AppleII][9]). This structure complies with the current structure of ScummVM engines, and therefore it can be directly adapted.
+WebVenture implements abstractions for the main subsystems of the engine ([engine][3], [graphics][4], [controls][5], [sound][6], [text][7], etc.), and then specializations for each of the engines ([Macintosh][8], [AppleII][9]). This structure complies with the current structure of ScummVM engines, and therefore it can be directly adapted to a single engine that supports both versions.
 
 Whenever possible, the project will follow a test-driven development model in which tests are written first as a form of specification and code is written later. This model offers the advantages of fast iterability and support for heavy refactoring (to handle the abstractions, as described later in the planning section) and ensures a certain level of quality within the product. Thus, the aim is to have fast (weekly or shorter) development cycles.
 
@@ -64,7 +64,7 @@ Whenever possible, the project will follow a test-driven development model in wh
 
 Taking advantage of the test-driven model described above, I will implement the Macintosh engine first, then aggresively refactor to abstract the subsystems mentioned above, and lastly implement the Apple II port support.
 
-The development will focus on Shadowgate support as a main goal, and then add support for the other games.
+The development will focus on Shadowgate support as a main goal, and then add support for the other games as a separate milestone. 
 
 - **May 23rd - May 29th**: 
     - Implement main loop of the game, and successfully add a new engine project to ScummVM.
@@ -127,7 +127,7 @@ Currently, and until May 30th, I'll be taking classes at university. During this
 
 After that, and until June 30th, my exam period will take place. Despite the appearances, this is quite a relaxed period, since this semester most of the subjects are projects-based, and thus will be over before this date. I will be able to dedicate 40 weekly hours to the project.
 
-From June 30th until the end of the program, I don't have any other significative commitment, so I'll be able to dedicate most of my time to the project, about  70 weekly hours.
+From June 30th until the end of the program, I don't have any other significative commitment, so I'll be able to dedicate most of my time to the project, about 70 weekly hours. This is notably more time than in the other periods, so this period will be also reserved as a contingency period, should any important roadblock arise during development.
 
 I will spend my time in Spain, so my timezone will be GMT + 1.
 
@@ -137,18 +137,20 @@ I am currently in my third year of college, at Universidad Complutense de Madrid
 
 In addition to that, I have done several side-projects, which I believe fit exactly with the profile needed for this project. Among others, these are:
 
-- Aa [CHIP-8 emulator][10] in C++, which I made because I love working with old machines and languages.
-- Some [games and engines][11] in JavaScript, for one of my ongoing courses at university, which shows that I can understand the WebVenture engine code.
+- A [CHIP-8 emulator][10] in C++, which I made because I love working with old machines and languages, and thus I have the tools to understand and figure out the nuances of these games, and the systems they run on.
+- Some [games and engines][11] in JavaScript, for one of my ongoing courses at university, which shows that I can understand game engines in general, and the WebVenture engine in particular.
 
 A more complete list of projects can be found in [my portfolio][12]. 
 
 I don't have mastery over C++, but the side-projects I've done and the fluency on C and Java that I aquired at University allow me to understand most of the complicated concepts with ease.
 
-## [Pull Request (688)](https://github.com/scummvm/scummvm/pull/688)
+## Past Contributions to ScummVM
+- Draft of  the MinGW64 compile guide for [the wiki.](http://wiki.scummvm.org/index.php/Compiling_ScummVM/MinGW-w64)
+- [Pull Request (688)](https://github.com/scummvm/scummvm/pull/688)
 
 ## References
 
-[1]: Shadowgate was the first "first person RPG", http://www.zojoi.com/shadowgate_macventure/ (description, second paragraph).
+[1]: Shadowgate was the first "first person RPG" of it's kind. http://www.zojoi.com/shadowgate_macventure/ (description, second paragraph).
 [2]: http://seancode.com/webventure/formats.html
 [3]: https://github.com/blorente/webventure/blob/master/engine.js
 [4]: https://github.com/blorente/webventure/blob/master/graphics.js

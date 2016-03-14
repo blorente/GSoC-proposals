@@ -11,7 +11,7 @@ _by Borja Lorente (blorente), 2016_
 
 The ScummVM project currently does not support the original MacVenture games developed for the Macintosh 128k. However, there is already a modern implementation of these games that supports the original game files, the WebVenture engine. 
 
-Most of the reverse engineering work for the MacVenture games is already done in the WebVenture engine, but since it is written in JavaScript, a direct port is necessary for it's integration with ScummVM. In addition, the WebVenture engine already supports the Apple II versions of the games, making it possible for them to be added to the same engine in the respective ScummVM implementation.
+Most of the reverse engineering work for the MacVenture games is [already done][2] in the WebVenture engine, but since it is written in JavaScript, a direct port is necessary for it's integration with ScummVM. In addition, the WebVenture engine already supports the Apple II versions of the games, making it possible for them to be added to the same engine in the respective ScummVM implementation.
 
 Therefore, the goals of this project are:
 
@@ -24,15 +24,16 @@ Most of the MacVenture games were pioneers in their respective genres (1), so th
 
 The project will follow the structure of WebVenture to support both versions of the games. 
 
-WebVenture implements abstractions for the main subsystems of the engine ([engine][2], [graphics][3], [controls][4], [sound][5], [text][6] etc. subsystems) and then specializations for each of the engines ([Mac][7], [AppleII][8]). This structure complies with the current structure of ScummVM engines, and therefore it can be directly adapted.
+WebVenture implements abstractions for the main subsystems of the engine ([engine][3], [graphics][4], [controls][5], [sound][6], [text][7], etc.), and then specializations for each of the engines ([Macintosh][8], [AppleII][9]). This structure complies with the current structure of ScummVM engines, and therefore it can be directly adapted.
 
-The project will follow a test-driven development model in which tests are written first as a form of specification and code is written later. This model offers the advantages of fast iterability, support for heavy refactoring (to handle the abstractions, as described later in the planning section) and ensure a certain level of quality within the product. Thus, the aim is to have fast (weekly or shorter) development cycles.
+Whenever possible, the project will follow a test-driven development model in which tests are written first as a form of specification and code is written later. This model offers the advantages of fast iterability and support for heavy refactoring (to handle the abstractions, as described later in the planning section) and ensures a certain level of quality within the product. Thus, the aim is to have fast (weekly or shorter) development cycles.
 
 ## Deliverables
 
 - Core abstractions, for both versions (Macintosh 128k and Apple II):
     - Main loop of the game, representation of victory conditions.    
     - Internal representation of graphics (sprites) and game objects.
+    - Script interpreter.
     - Windowing system (Drag and drop, window resizing)
     - Menu-based point-and-click controls.
     - Text and dialogue system.
@@ -78,7 +79,8 @@ The development will focus on Shadowgate support as a main goal, and then add su
     - Implement dialogue system.
 
 - **June 13th - June 19th**: 
-    - Implement sound system.  
+    - Implement sound system.
+    - Implement script interpreter.  
     - Achieve Milestone 1.
     
 - **June 20th - June 26th**:
@@ -97,7 +99,7 @@ The development will focus on Shadowgate support as a main goal, and then add su
     - Implement Apple II graphics system.
 
 - **July 18th - July 24th**:      
-    - Extend the interface to allow Apple II ports. 
+    - Extend the game interface to allow Apple II ports. 
     - Extend dialogue system to allow Apple II games.
 
 - **July 25th - July 31st**: 
@@ -131,14 +133,14 @@ I will spend my time in Spain, so my timezone will be GMT + 1.
 
 ## Technical background
 
-I am currently in my third year of college, at Universidad Complutense de Madrid, in Spain. The main languages used there are Java and C, but I have also taken classes in ARM7 assembly, C++, JavaScript, among others. The highly theoretical approach my university takes ensures that the principles of good software design are prioritized over teaching particular languages. Therefore, I am able to pick up new languages really quickly.
+I am currently in my third year of college, at Universidad Complutense de Madrid, in Spain. The main languages used there are Java and C, but I have also taken classes taught in ARM7 assembly, C++ and JavaScript, among others. The highly theoretical approach my university takes ensures that the principles of good software design are prioritized over teaching particular languages. Therefore, I am able to pick up new languages really quickly.
 
 In addition to that, I have done several side-projects, which I believe fit exactly with the profile needed for this project. Among others, these are:
 
-- Aa [CHIP-8 emulator][9] in C++, which I made because I love working with old machines and languages.
-- Some [games and engines][10] in JavaScript, for one of my ongoing courses at university, so I can understand the WebVenture engine code.
+- Aa [CHIP-8 emulator][10] in C++, which I made because I love working with old machines and languages.
+- Some [games and engines][11] in JavaScript, for one of my ongoing courses at university, which shows that I can understand the WebVenture engine code.
 
-A more complete list of available projects can be found in [my portfolio][11]. 
+A more complete list of projects can be found in [my portfolio][12]. 
 
 I don't have mastery over C++, but the side-projects I've done and the fluency on C and Java that I aquired at University allow me to understand most of the complicated concepts with ease.
 
@@ -147,14 +149,15 @@ I don't have mastery over C++, but the side-projects I've done and the fluency o
 ## References
 
 [1]: Shadowgate was the first "first person RPG", http://www.zojoi.com/shadowgate_macventure/ (description, second paragraph).
-[2]: https://github.com/blorente/webventure/blob/master/engine.js
-[3]: https://github.com/blorente/webventure/blob/master/graphics.js
-[4]: https://github.com/blorente/webventure/blob/master/controls.js
-[5]: https://github.com/blorente/webventure/blob/master/sound.js
-[6]: https://github.com/blorente/webventure/blob/master/text.js
-[7]: https://github.com/blorente/webventure/tree/master/mac
-[8]: https://github.com/blorente/webventure/tree/master/gs
-[9]: https://bitbucket.org/Kerith/chip-towers
-[10]: https://bitbucket.org/Kerith/dvi-labs
-[11]: http://blorente.github.io
+[2]: http://seancode.com/webventure/formats.html
+[3]: https://github.com/blorente/webventure/blob/master/engine.js
+[4]: https://github.com/blorente/webventure/blob/master/graphics.js
+[5]: https://github.com/blorente/webventure/blob/master/controls.js
+[6]: https://github.com/blorente/webventure/blob/master/sound.js
+[7]: https://github.com/blorente/webventure/blob/master/text.js
+[8]: https://github.com/blorente/webventure/tree/master/mac
+[9]: https://github.com/blorente/webventure/tree/master/gs
+[10]: https://bitbucket.org/Kerith/chip-towers
+[11]: https://bitbucket.org/Kerith/dvi-labs
+[12]: http://blorente.github.io
 

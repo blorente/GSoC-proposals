@@ -3,9 +3,9 @@
 - **Handle (IRC and wiki):** blorente
 - **Phone:** (+34) 722 747 898
 
-# Add support for MacVenture games via WebVenture engine.
+# Add support for MacVenture games via WebVenture engine
 
-_by Borja Lorente (blorente), 2016_
+*by Borja Lorente (blorente), 2016*
 
 ## Problem Statement and Goals
 

@@ -2,6 +2,7 @@
 - **Email:** blorente@ucm.es
 - **Handle (IRC and wiki):** blorente
 - **Phone:** (+34) 722 747 898
+- **Possible Mentors:** [John Willis](http://wiki.scummvm.org/index.php/User:DJWillis), [Filippos Karapetis](http://wiki.scummvm.org/index.php/User:Md5)
 
 # Add support for MacVenture games by reimplementing the WebVenture engine
 
